@@ -1,0 +1,469 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* App Container */
+.app-container {
+    max-width: 500px;
+    margin: 0 auto;
+    min-height: 100vh;
+    background: white;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Header */
+.app-header {
+    background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+    color: white;
+    padding: 2rem 1.5rem 1.5rem;
+    text-align: center;
+    border-radius: 0 0 20px 20px;
+}
+
+.app-header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.subtitle {
+    font-size: 1rem;
+    opacity: 0.9;
+    font-weight: 300;
+}
+
+/* Main Content */
+.main-content {
+    padding: 1.5rem;
+}
+
+/* Setup Section */
+.setup-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: #1f2937;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #374151;
+    font-size: 0.95rem;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 1rem;
+    border: 2px solid #e5e7eb;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    background: #f9fafb;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #2563eb;
+    background: white;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+/* Buttons */
+.btn {
+    display: block;
+    width: 100%;
+    padding: 1rem 1.5rem;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+    color: white;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(37, 99, 235, 0.4);
+}
+
+.btn-secondary {
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    color: white;
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+}
+
+.btn-secondary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(16, 185, 129, 0.4);
+}
+
+.btn-warning {
+    background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+    color: white;
+    box-shadow: 0 4px 12px rgba(245, 158, 11, 0.3);
+}
+
+.btn-warning:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(245, 158, 11, 0.4);
+}
+
+.btn-danger {
+    background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+    color: white;
+    box-shadow: 0 4px 12px rgba(239, 68, 68, 0.3);
+}
+
+.btn-danger:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(239, 68, 68, 0.4);
+}
+
+/* Timer Section */
+.timer-section {
+    text-align: center;
+}
+
+.timer-display {
+    margin-bottom: 2rem;
+}
+
+.time-remaining {
+    font-size: 4rem;
+    font-weight: 700;
+    color: #1f2937;
+    margin-bottom: 1rem;
+    font-family: 'Courier New', monospace;
+}
+
+.workout-progress {
+    margin-bottom: 1rem;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 12px;
+    background: #e5e7eb;
+    border-radius: 6px;
+    overflow: hidden;
+    margin-bottom: 0.5rem;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #2563eb 0%, #1d4ed8 100%);
+    border-radius: 6px;
+    transition: width 0.3s ease;
+    width: 0%;
+}
+
+.progress-text {
+    font-size: 0.9rem;
+    color: #6b7280;
+    font-weight: 500;
+}
+
+/* Hydration Status */
+.hydration-status {
+    background: #f8fafc;
+    border-radius: 16px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    border: 2px solid #e2e8f0;
+}
+
+.hydration-status h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    color: #1f2937;
+}
+
+.water-bottle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.bottle-visual {
+    width: 60px;
+    height: 80px;
+    background: #e5e7eb;
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid #d1d5db;
+}
+
+.water-level {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(180deg, #3b82f6 0%, #1d4ed8 100%);
+    transition: height 0.5s ease;
+    height: 100%;
+}
+
+.bottle-info {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #374151;
+}
+
+.next-drink {
+    background: #dbeafe;
+    padding: 1rem;
+    border-radius: 12px;
+    border: 1px solid #bfdbfe;
+}
+
+.next-drink p {
+    margin: 0;
+    color: #1e40af;
+    font-weight: 500;
+}
+
+/* Action Buttons */
+.action-buttons {
+    display: grid;
+    gap: 1rem;
+}
+
+/* Results Section */
+.results-section {
+    text-align: center;
+}
+
+.results-section h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #059669;
+}
+
+.results-summary {
+    background: #f0fdf4;
+    border-radius: 16px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    border: 2px solid #bbf7d0;
+}
+
+.result-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid #d1fae5;
+}
+
+.result-item:last-child {
+    border-bottom: none;
+}
+
+.result-label {
+    font-weight: 600;
+    color: #374151;
+}
+
+.result-value {
+    font-weight: 700;
+    color: #059669;
+    font-size: 1.1rem;
+}
+
+/* Footer */
+.app-footer {
+    text-align: center;
+    padding: 1.5rem;
+    color: #6b7280;
+    font-size: 0.9rem;
+    background: #f9fafb;
+    border-top: 1px solid #e5e7eb;
+}
+
+.irish-note {
+    margin-top: 0.5rem;
+    font-size: 0.8rem;
+    color: #059669;
+    font-style: italic;
+}
+
+/* Modal */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: white;
+    padding: 2rem;
+    border-radius: 16px;
+    margin: 1rem;
+    max-width: 400px;
+    text-align: center;
+}
+
+.modal-content h3 {
+    margin-bottom: 1rem;
+    color: #1f2937;
+}
+
+.modal-content p {
+    margin-bottom: 1.5rem;
+    color: #6b7280;
+}
+
+.modal-buttons {
+    display: grid;
+    gap: 1rem;
+}
+
+/* Utility Classes */
+.hidden {
+    display: none !important;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    .app-header h1 {
+        font-size: 2rem;
+    }
+    
+    .time-remaining {
+        font-size: 3rem;
+    }
+    
+    .main-content {
+        padding: 1rem;
+    }
+    
+    .app-header {
+        padding: 1.5rem 1rem 1rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .app-container {
+        max-width: 600px;
+    }
+    
+    .action-buttons {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .btn {
+        margin-bottom: 0;
+    }
+}
+
+/* iOS Specific Optimizations */
+@supports (-webkit-touch-callout: none) {
+    .btn {
+        -webkit-tap-highlight-color: transparent;
+    }
+    
+    .form-group input {
+        -webkit-appearance: none;
+        border-radius: 12px;
+    }
+}
+
+/* Dark mode support for iOS */
+@media (prefers-color-scheme: dark) {
+    body {
+        background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+    }
+    
+    .app-container {
+        background: #1f2937;
+        color: #f9fafb;
+    }
+    
+    .setup-section h2,
+    .hydration-status h3 {
+        color: #f9fafb;
+    }
+    
+    .form-group label {
+        color: #d1d5db;
+    }
+    
+    .form-group input {
+        background: #374151;
+        border-color: #4b5563;
+        color: #f9fafb;
+    }
+    
+    .form-group input:focus {
+        background: #4b5563;
+    }
+    
+    .hydration-status {
+        background: #374151;
+        border-color: #4b5563;
+    }
+    
+    .bottle-info {
+        color: #d1d5db;
+    }
+    
+    .next-drink {
+        background: #1e3a8a;
+        border-color: #3b82f6;
+    }
+    
+    .next-drink p {
+        color: #dbeafe;
+    }
+    
+    .results-summary {
+        background: #064e3b;
+        border-color: #10b981;
+    }
+    
+    .result-label {
+        color: #d1d5db;
+    }
+    
+    .app-footer {
+        background: #374151;
+        border-color: #4b5563;
+        color: #9ca3af;
+    }
+}

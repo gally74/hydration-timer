@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Hydration Timer">
+    <meta name="theme-color" content="#2563eb">
+    <title>Hydration Timer - Stay Hydrated During Workouts</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="apple-touch-icon" href="icon-192.png">
+    <link rel="manifest" href="manifest.json">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="app-header">
+            <h1>💧 Hydration Timer</h1>
+            <p class="subtitle">Stay hydrated during your indoor cycling sessions</p>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Setup Section -->
+            <section id="setup-section" class="setup-section">
+                <h2>Workout Setup</h2>
+                <div class="form-group">
+                    <label for="workout-duration">Workout Duration (minutes)</label>
+                    <input type="number" id="workout-duration" min="15" max="180" value="45" class="duration-input">
+                </div>
+                <div class="form-group">
+                    <label for="water-amount">Water Amount (ml)</label>
+                    <input type="number" id="water-amount" min="250" max="1000" value="500" class="water-input">
+                </div>
+                <div class="form-group">
+                    <label for="creatine-amount">Creatine Amount (g)</label>
+                    <input type="number" id="creatine-amount" min="0" max="10" step="0.5" value="5" class="creatine-input">
+                </div>
+                <button id="start-workout" class="btn btn-primary">Start Workout</button>
+            </section>
+
+            <!-- Timer Section (Hidden initially) -->
+            <section id="timer-section" class="timer-section hidden">
+                <div class="timer-display">
+                    <div class="time-remaining">
+                        <span id="time-remaining">00:00</span>
+                    </div>
+                    <div class="workout-progress">
+                        <div class="progress-bar">
+                            <div id="workout-progress-fill" class="progress-fill"></div>
+                        </div>
+                        <span class="progress-text">0% Complete</span>
+                    </div>
+                </div>
+
+                <div class="hydration-status">
+                    <h3>Hydration Status</h3>
+                    <div class="water-bottle">
+                        <div class="bottle-visual">
+                            <div id="water-level" class="water-level"></div>
+                        </div>
+                        <div class="bottle-info">
+                            <span id="water-remaining">500ml</span> remaining
+                        </div>
+                    </div>
+                    <div class="next-drink">
+                        <p>Next drink reminder in: <span id="next-drink-countdown">--:--</span></p>
+                    </div>
+                </div>
+
+                <div class="action-buttons">
+                    <button id="drink-now" class="btn btn-secondary">I Just Drank! 💧</button>
+                    <button id="pause-workout" class="btn btn-warning">Pause</button>
+                    <button id="end-workout" class="btn btn-danger">End Workout</button>
+                </div>
+            </section>
+
+            <!-- Results Section (Hidden initially) -->
+            <section id="results-section" class="results-section hidden">
+                <h2>Workout Complete! 🎉</h2>
+                <div class="results-summary">
+                    <div class="result-item">
+                        <span class="result-label">Duration:</span>
+                        <span id="final-duration" class="result-value">--</span>
+                    </div>
+                    <div class="result-item">
+                        <span class="result-label">Water Consumed:</span>
+                        <span id="final-water" class="result-value">--</span>
+                    </div>
+                    <div class="result-item">
+                        <span class="result-label">Creatine Intake:</span>
+                        <span id="final-creatine" class="result-value">--</span>
+                    </div>
+                </div>
+                <button id="new-workout" class="btn btn-primary">Start New Workout</button>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="app-footer">
+            <p>Perfect for your Zwift, Rouvy, and indoor cycling sessions</p>
+            <p class="irish-note">🏔️ Ideal for those virtual climbs up the Wicklow Mountains or long rides from Cork to Dublin!</p>
+        </footer>
+    </div>
+
+    <!-- Notification Permission Modal -->
+    <div id="notification-modal" class="modal hidden">
+        <div class="modal-content">
+            <h3>Enable Notifications</h3>
+            <p>Allow notifications to get drink reminders even when the app is in the background.</p>
+            <div class="modal-buttons">
+                <button id="enable-notifications" class="btn btn-primary">Enable</button>
+                <button id="skip-notifications" class="btn btn-secondary">Skip</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
